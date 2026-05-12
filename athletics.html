@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Легкая атлетика - КСШОР Республики Мордовия</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="direction-style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell logo-icon"></i>
+                <span class="logo-text">КСШОР Республики Мордовия</span>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="index.html#directions">Направления</a></li>
+                    <li><a href="index.html#application">Подать заявку</a></li>
+                    <li><a href="index.html#reviews">Отзывы</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный блок направления -->
+    <section class="direction-hero athletics-hero">
+        <div class="container">
+            <div class="direction-hero-content">
+                <h1>Легкая атлетика</h1>
+                <p class="direction-subtitle">Королева спорта для детей с 8 лет. Развитие скорости, силы и выносливости</p>
+                <div class="direction-hero-buttons">
+                    <a href="#schedule" class="cta-button">
+                        <i class="far fa-calendar-alt"></i> Расписание
+                    </a>
+                    <a href="index.html#application" class="cta-button secondary">
+                        <i class="fas fa-file-alt"></i> Записаться
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Информация о направлении -->
+    <section class="direction-info-section">
+        <div class="container">
+            <div class="direction-info-container">
+                <div class="direction-main-info">
+                    <h2>О направлении</h2>
+                    <p>Легкая атлетика — основа всех видов спорта, развивающая все физические качества: скорость, силу, выносливость, координацию и ловкость. Наши тренировки включают бег, прыжки, метания и многоборье, что позволяет каждому ребенку найти свою специализацию.</p>
+                    
+                    <!-- Спецификации для легкой атлетики -->
+                    <div class="direction-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-running"></i>
+                            <h4>Возраст занятий</h4>
+                            <p>8-18 лет</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>Пол спортсменов</h4>
+                            <p>Мальчики и девочки</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-route"></i>
+                            <h4>Стадион</h4>
+                            <p>400-метровая дорожка</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Размер группы</h4>
+                            <p>До 12 человек</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Дисциплины легкой атлетики -->
+                    <div class="techniques-section">
+                        <h3>Основные дисциплины</h3>
+                        <div class="techniques-tags">
+                            <span class="technique-tag">Бег на короткие дистанции</span>
+                            <span class="technique-tag">Бег на длинные дистанции</span>
+                            <span class="technique-tag">Прыжки в длину</span>
+                            <span class="technique-tag">Прыжки в высоту</span>
+                            <span class="technique-tag">Метание</span>
+                            <span class="technique-tag">Многоборье</span>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-features">
+                        <div class="feature-item">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>Возрастные группы</h4>
+                            <p>8-18 лет (мальчики и девочки)</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Достижения</h4>
+                            <p>Чемпионы республики, призеры ПФО</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-tie"></i>
+                            <h4>Тренерский состав</h4>
+                            <p>Мастера спорта, опытные педагоги</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Безопасность</h4>
+                            <p>Современное покрытие, медицинское сопровождение</p>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-benefits">
+                        <h3>Преимущества занятий легкой атлетикой:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Всестороннее физическое развитие</li>
+                            <li><i class="fas fa-check"></i> Улучшение работы сердечно-сосудистой системы</li>
+                            <li><i class="fas fa-check"></i> Развитие скоростных качеств и выносливости</li>
+                            <li><i class="fas fa-check"></i> Формирование дисциплины и целеустремленности</li>
+                            <li><i class="fas fa-check"></i> Укрепление опорно-двигательного аппарата</li>
+                            <li><i class="fas fa-check"></i> Подготовка к соревнованиям различного уровня</li>
+                        </ul>
+                    </div>
+
+                    <!-- Необходимое оборудование -->
+                    <div class="equipment-section">
+                        <h3>Необходимая экипировка</h3>
+                        <div class="equipment-grid">
+                            <div class="equipment-card">
+                                <i class="fas fa-shoe-prints"></i>
+                                <span>Беговые кроссовки</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-tshirt"></i>
+                                <span>Спортивная форма</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-tint"></i>
+                                <span>Бутылка для воды</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-wind"></i>
+                                <span>Ветровка</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-sun"></i>
+                                <span>Кепка/кепка</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-briefcase-medical"></i>
+                                <span>Медицинская справка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Медицинские требования -->
+                    <div class="requirements-section">
+                        <h4><i class="fas fa-heartbeat"></i> Медицинские требования</h4>
+                        <ul>
+                            <li>Обязательна справка от педиатра о допуске к занятиям легкой атлетикой</li>
+                            <li>ЭКГ с нагрузкой и в покое</li>
+                            <li>Заключение ортопеда об отсутствии противопоказаний</li>
+                            <li>Справка об отсутствии сердечно-сосудистых заболеваний</li>
+                        </ul>
+                    </div>
+
+                    <div class="direction-program">
+                        <h3>Программа обучения</h3>
+                        <div class="program-levels">
+                            <div class="program-level">
+                                <h4><i class="fas fa-seedling"></i> Начальный уровень</h4>
+                                <p>Основы техники бега, общефизическая подготовка, развитие координации, изучение простейших легкоатлетических упражнений</p>
+                            </div>
+                            <div class="program-level">
+                                <h4><i class="fas fa-tree"></i> Продвинутый уровень</h4>
+                                <p>Совершенствование техники, специализация в отдельных дисциплинах, участие в соревнованиях, тактическая подготовка</p>
+                            </div>
+                            <div class="program-level">
+                                <h4><i class="fas fa-medal"></i> Спортивное мастерство</h4>
+                                <p>Углубленная специализация, подготовка к серьезным соревнованиям, индивидуальные тренировочные планы, работа над результатами</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="direction-sidebar">
+                    <div class="direction-card-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-info-circle"></i> Быстрая информация</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="info-label">Минимальный возраст:</span>
+                                <span class="info-value">8 лет</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Пол:</span>
+                                <span class="info-value">Мальчики и девочки</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Тренировок в неделю:</span>
+                                <span class="info-value">3-4 раза</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Длительность тренировки:</span>
+                                <span class="info-value">1,5 часа</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Необходимая экипировка:</span>
+                                <span class="info-value">Кроссовки, спортивная форма</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Стоимость в месяц:</span>
+                                <span class="info-value">3 000 ₽</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Место занятий:</span>
+                                <span class="info-value">Стадион, манеж</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-footer">
+                            <a href="index.html#application" class="sidebar-btn">
+                                <i class="fas fa-file-signature"></i> Записаться на пробную тренировку
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-card-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-user-graduate"></i> Тренеры</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="coach-card">
+                                <div class="coach-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="coach-info">
+                                    <h4>Николаев Алексей Викторович</h4>
+                                    <p>Заслуженный тренер России</p>
+                                    <p>Стаж: 20 лет</p>
+                                </div>
+                            </div>
+                            <div class="coach-card">
+                                <div class="coach-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="coach-info">
+                                    <h4>Орлова Марина Сергеевна</h4>
+                                    <p>Мастер спорта международного класса</p>
+                                    <p>Стаж: 12 лет</p>
+                                </div>
+                            </div>
+                            <div class="coach-card">
+                                <div class="coach-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="coach-info">
+                                    <h4>Васильев Игорь Павлович</h4>
+                                    <p>Кандидат в мастера спорта</p>
+                                    <p>Стаж: 8 лет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-card-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-award"></i> Наши достижения</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-medal" style="color: #FFD700;"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>8 золотых медалей</h4>
+                                    <p>Чемпионат Республики Мордовия 2023</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-medal" style="color: #C0C0C0;"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>5 серебряных медалей</h4>
+                                    <p>Соревнования ПФО 2023</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-trophy" style="color: #CD7F32;"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>Кубок Республики</h4>
+                                    <p>Командное первенство 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Расписание -->
+    <section class="direction-schedule-section" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Расписание тренировок</h2>
+            <p class="section-subtitle">Расписание на текущий семестр</p>
+            
+            <div class="schedule-container">
+                <div class="schedule-tabs">
+                    <button class="schedule-tab active" data-group="junior">
+                        <span class="tab-text">Основная группа 8-18 лет</span>
+                    </button>
+                </div>
+                
+                <div class="schedule-content">
+                    <!-- Младшая группа -->
+                    <div class="schedule-group active" id="junior">
+                        <div class="schedule-table">
+                            <div class="schedule-header">
+                                <div class="schedule-cell">День недели</div>
+                                <div class="schedule-cell">Время</div>
+                                <div class="schedule-cell">Тренер</div>
+                                <div class="schedule-cell">Место</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Понедельник</span>
+                                </div>
+                                <div class="schedule-cell">15:00 - 16:30</div>
+                                <div class="schedule-cell">Васильев И.П.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Среда</span>
+                                </div>
+                                <div class="schedule-cell">15:00 - 16:30</div>
+                                <div class="schedule-cell">Васильев И.П.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Пятница</span>
+                                </div>
+                                <div class="schedule-cell">15:00 - 16:30</div>
+                                <div class="schedule-cell">Орлова М.С.</div>
+                                <div class="schedule-cell">Манеж</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Суббота</span>
+                                </div>
+                                <div class="schedule-cell">10:00 - 11:30</div>
+                                <div class="schedule-cell">Васильев И.П.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Средняя группа -->
+                    <div class="schedule-group" id="middle">
+                        <div class="schedule-table">
+                            <div class="schedule-header">
+                                <div class="schedule-cell">День недели</div>
+                                <div class="schedule-cell">Время</div>
+                                <div class="schedule-cell">Тренер</div>
+                                <div class="schedule-cell">Место</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Вторник</span>
+                                </div>
+                                <div class="schedule-cell">16:00 - 17:30</div>
+                                <div class="schedule-cell">Орлова М.С.</div>
+                                <div class="schedule-cell">Манеж</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Четверг</span>
+                                </div>
+                                <div class="schedule-cell">16:00 - 17:30</div>
+                                <div class="schedule-cell">Орлова М.С.</div>
+                                <div class="schedule-cell">Манеж</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Пятница</span>
+                                </div>
+                                <div class="schedule-cell">17:00 - 18:30</div>
+                                <div class="schedule-cell">Николаев А.В.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Суббота</span>
+                                </div>
+                                <div class="schedule-cell">12:00 - 13:30</div>
+                                <div class="schedule-cell">Николаев А.В.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Старшая группа -->
+                    <div class="schedule-group" id="senior">
+                        <div class="schedule-table">
+                            <div class="schedule-header">
+                                <div class="schedule-cell">День недели</div>
+                                <div class="schedule-cell">Время</div>
+                                <div class="schedule-cell">Тренер</div>
+                                <div class="schedule-cell">Место</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Понедельник</span>
+                                </div>
+                                <div class="schedule-cell">17:00 - 19:00</div>
+                                <div class="schedule-cell">Николаев А.В.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Вторник</span>
+                                </div>
+                                <div class="schedule-cell">17:30 - 19:30</div>
+                                <div class="schedule-cell">Орлова М.С.</div>
+                                <div class="schedule-cell">Манеж</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Среда</span>
+                                </div>
+                                <div class="schedule-cell">17:00 - 19:00</div>
+                                <div class="schedule-cell">Николаев А.В.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Четверг</span>
+                                </div>
+                                <div class="schedule-cell">17:30 - 19:30</div>
+                                <div class="schedule-cell">Орлова М.С.</div>
+                                <div class="schedule-cell">Манеж</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Пятница</span>
+                                </div>
+                                <div class="schedule-cell">17:00 - 19:00</div>
+                                <div class="schedule-cell">Николаев А.В.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Суббота</span>
+                                </div>
+                                <div class="schedule-cell">14:00 - 16:00</div>
+                                <div class="schedule-cell">Николаев А.В.</div>
+                                <div class="schedule-cell">Стадион</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="schedule-notes">
+                    <h4><i class="fas fa-exclamation-circle"></i> Важная информация:</h4>
+                    <ul>
+                        <li>Первая тренировка — бесплатная пробная</li>
+                        <li>При себе иметь: беговые кроссовки, спортивную форму, сменную обувь, полотенце</li>
+                        <li>Обязательна медицинская справка о допуске к занятиям легкой атлетикой</li>
+                        <li>Тренировки проводятся на свежем воздухе и в манеже</li>
+                        <li>В случае плохой погоды тренировки переносятся в манеж</li>
+                        <li>Запись в группы производится после пробной тренировки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="direction-gallery-section">
+        <div class="container">
+            <h2 class="section-title">Наши тренировки</h2>
+            <p class="section-subtitle">Фотографии с тренировок и соревнований</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/athletics/1glav.jpg" 
+                         alt="Тренировка по легкой атлетике" loading="lazy">
+                    <div class="gallery-caption">Тренировочный процесс на стадионе</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/athletics/3 sorevi.jfif" 
+                         alt="Соревнования по легкой атлетике" loading="lazy">
+                    <div class="gallery-caption">Региональные соревнования</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/athletics/4 nagradi.jfif" 
+                         alt="Награждение легкоатлетов" loading="lazy">
+                    <div class="gallery-caption">Награждение победителей</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Блок -->
+    <section class="direction-cta-section">
+        <div class="container">
+            <div class="direction-cta-content">
+                <h2>Начните заниматься легкой атлетикой с нами!</h2>
+                <p>Запишитесь на бесплатную пробную тренировку по легкой атлетике и станьте частью нашей команды!</p>
+                <div class="direction-cta-buttons">
+                    <a href="index.html#application" class="cta-button large">
+                        <i class="fas fa-file-signature"></i> Записаться сейчас
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>КСШОР Республики Мордовия</h3>
+                    <p>Колледж спортивной школы олимпийского резерва - ведущее учреждение спортивной подготовки в Республике Мордовия.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Саранск, ул. Спортивная, д. 15</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (8342) 55-55-55</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>kshor-mordovia@sport.ru</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Пт: 8:00-20:00, Сб: 9:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="contact-info">
+                        <li><a href="index.html#home">Главная</a></li>
+                        <li><a href="index.html#directions">Направления</a></li>
+                        <li><a href="index.html#application">Подать заявку</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 КСШОР Республики Мордовия г. Саранск. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Стрелка для возврата наверх -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript для страницы легкой атлетики
+        document.addEventListener('DOMContentLoaded', function() {
+            // Табы расписания
+            const scheduleTabs = document.querySelectorAll('.schedule-tab');
+            const scheduleGroups = document.querySelectorAll('.schedule-group');
+            
+            scheduleTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Удаляем активный класс у всех вкладок
+                    scheduleTabs.forEach(t => t.classList.remove('active'));
+                    // Добавляем активный класс текущей вкладке
+                    tab.classList.add('active');
+                    
+                    // Скрываем все группы
+                    scheduleGroups.forEach(group => group.classList.remove('active'));
+                    
+                    // Показываем нужную группу
+                    const groupId = tab.getAttribute('data-group');
+                    document.getElementById(groupId).classList.add('active');
+                });
+            });
+            
+            // Возврат наверх
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTop.style.display = 'block';
+                    } else {
+                        backToTop.style.display = 'none';
+                    }
+                });
+                
+                backToTop.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Мобильное меню
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2734 @@
+/* direction-style.css - Стили для страниц спортивных направлений */
+
+/* Основные переменные цветов (совпадают с основной страницей) */
+:root {
+    --primary-color: #6B8FD4;     /* Основной синий */
+    --header-color: #29467F;      /* Темно-синий для заголовков */
+    --accent-color: #4575D4;      /* Акцентный синий */
+    --secondary-color: #4CAF50;   /* Зеленый для успеха */
+    --white-color: #FFFFFF;
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+    --gray-color: #f8f9fa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+}
+
+/* Главный блок направления */
+.direction-hero {
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.direction-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(41, 70, 127, 0.85) 0%, rgba(69, 117, 212, 0.75) 100%);
+}
+
+.direction-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.direction-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.direction-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.direction-hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.direction-hero-buttons .cta-button {
+    padding: 16px 42px;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.direction-hero-buttons .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s;
+    z-index: -1;
+}
+
+.direction-hero-buttons .cta-button:hover::before {
+    left: 100%;
+}
+
+.direction-hero-buttons .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.direction-hero-buttons .cta-button.secondary:hover {
+    background: var(--white-color);
+    color: var(--header-color);
+}
+
+/* Фоновые изображения для разных направлений */
+.wrestling-hero {
+    background-image: url('https://images.unsplash.com/photo-1600881332847-5d70b56eb327?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+.swimming-hero {
+    background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Информация о направлении */
+.direction-info-section {
+    padding: 100px 0;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.direction-info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.direction-info-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.direction-main-info h2 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: var(--header-color);
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.direction-main-info h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.direction-main-info > p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    color: #555;
+    background: var(--gray-color);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Спецификации */
+.direction-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+    border-radius: 15px;
+    border: 2px solid rgba(69, 117, 212, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.spec-item {
+    text-align: center;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.spec-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 25px rgba(69, 117, 212, 0.15);
+}
+
+.spec-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.spec-item:hover i {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+.spec-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    font-weight: 600;
+}
+
+.spec-item p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Техники борьбы */
+.techniques-section {
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+    border-radius: 15px;
+    border: 2px solid rgba(69, 117, 212, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.techniques-section h3 {
+    color: var(--header-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.techniques-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.technique-tag {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(69, 117, 212, 0.2);
+}
+
+.technique-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(69, 117, 212, 0.3);
+    border-color: #fff;
+}
+
+/* Особенности направления */
+.direction-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-item {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.feature-item:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 35px rgba(69, 117, 212, 0.15);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover i {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+.feature-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--header-color);
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* Преимущества */
+.direction-benefits {
+    background: linear-gradient(135deg, var(--header-color), #1a315f);
+    padding: 40px;
+    border-radius: 15px;
+    color: var(--white-color);
+    margin-bottom: 50px;
+    box-shadow: 0 8px 25px rgba(41, 70, 127, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.direction-benefits::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.direction-benefits h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--white-color);
+    position: relative;
+    z-index: 1;
+}
+
+.direction-benefits ul {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.direction-benefits li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.direction-benefits li:last-child {
+    border-bottom: none;
+}
+
+.direction-benefits li i {
+    color: var(--secondary-color);
+    margin-top: 3px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.direction-benefits li:hover i {
+    transform: rotate(15deg);
+}
+
+/* Оборудование */
+.equipment-section {
+    margin: 40px 0;
+}
+
+.equipment-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--header-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.equipment-card {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.equipment-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 30px rgba(69, 117, 212, 0.15);
+    background: linear-gradient(135deg, #f8fafd, #ffffff);
+}
+
+.equipment-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.equipment-card:hover i {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+.equipment-card span {
+    font-size: 1rem;
+    color: var(--header-color);
+    font-weight: 500;
+    display: block;
+    line-height: 1.4;
+}
+
+/* Медицинские требования */
+.requirements-section {
+    background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 6px solid var(--accent-color);
+    margin: 40px 0;
+    box-shadow: 0 8px 25px rgba(69, 117, 212, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.requirements-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(69, 117, 212, 0.1);
+    border-radius: 50%;
+}
+
+.requirements-section h4 {
+    color: var(--header-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.requirements-section ul {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.requirements-section li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #29467F;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    padding: 10px 0 10px 30px;
+    border-bottom: 1px solid rgba(69, 117, 212, 0.2);
+}
+
+.requirements-section li:last-child {
+    border-bottom: none;
+}
+
+.requirements-section li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    padding-left: 35px;
+    border-radius: 6px;
+}
+
+.requirements-section li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.requirements-section li:hover::before {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+/* Программа обучения */
+.direction-program {
+    margin-top: 60px;
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.direction-program::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+}
+
+.direction-program h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--header-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+.program-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.program-level {
+    background-color: var(--gray-color);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+}
+
+.program-level:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 12px 30px rgba(69, 117, 212, 0.15);
+    background: var(--white-color);
+}
+
+.program-level h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.program-level p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Сайдбар */
+.direction-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    position: sticky;
+    top: 120px;
+}
+
+.direction-card-sidebar {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 2px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.direction-card-sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white-color);
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-header::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.sidebar-header h3 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-content {
+    padding: 30px;
+}
+
+/* Информационные элементы */
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background-color: rgba(107, 143, 212, 0.05);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 -10px;
+    border-radius: 6px;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #666;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.info-value {
+    color: var(--header-color);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* Кнопка в сайдбаре */
+.sidebar-footer {
+    padding: 0 30px 30px;
+}
+
+.sidebar-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.sidebar-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.sidebar-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(69, 117, 212, 0.3);
+}
+
+/* Карточки тренеров */
+.coach-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.coach-card:hover {
+    background-color: rgba(107, 143, 212, 0.05);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 -15px;
+    border-radius: 10px;
+}
+
+.coach-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.coach-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    border: 4px solid var(--white-color);
+    box-shadow: 0 4px 12px rgba(69, 117, 212, 0.3);
+    transition: all 0.3s ease;
+}
+
+.coach-card:hover .coach-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(69, 117, 212, 0.4);
+}
+
+.coach-info h4 {
+    font-size: 1.2rem;
+    color: var(--header-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.coach-info p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+/* Карточки достижений */
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    background-color: rgba(107, 143, 212, 0.05);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 -15px;
+    border-radius: 10px;
+}
+
+.achievement-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover .achievement-icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.achievement-info h4 {
+    font-size: 1.15rem;
+    color: var(--header-color);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.achievement-info p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Расписание */
+.direction-schedule-section {
+    background-color: var(--gray-color);
+    padding: 100px 0;
+    position: relative;
+}
+
+.direction-schedule-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+
+.schedule-container {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0f0f0;
+}
+
+/* Вкладки расписания */
+.schedule-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+.schedule-tab {
+    padding: 15px 30px;
+    background-color: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    position: relative;
+    overflow: visible;
+}
+
+.schedule-tab span.tab-text {
+    position: relative;
+    z-index: 2;
+    color: inherit;
+    display: block;
+}
+
+.schedule-tab.active {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 6px 15px rgba(69, 117, 212, 0.3);
+}
+
+.schedule-tab:hover {
+    color: var(--header-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Контент расписания */
+.schedule-group {
+    display: none;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.schedule-group.active {
+    display: block;
+}
+
+.schedule-table {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #f0f0f0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.schedule-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: linear-gradient(135deg, var(--header-color), #1a315f);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.schedule-cell {
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-cell:last-child {
+    border-right: none;
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    background-color: var(--white-color);
+}
+
+.schedule-row:hover {
+    background-color: rgba(107, 143, 212, 0.05);
+    transform: translateX(5px);
+}
+
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.schedule-row .schedule-cell {
+    padding: 18px 20px;
+    color: #555;
+    border-right: 1px solid #f0f0f0;
+    font-size: 1.05rem;
+}
+
+.schedule-row .schedule-cell:last-child {
+    border-right: none;
+}
+
+.day-name {
+    font-weight: 600;
+    color: var(--header-color);
+    font-size: 1.1rem;
+}
+
+/* Примечания к расписанию */
+.schedule-notes {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 12px;
+    border-left: 6px solid var(--secondary-color);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.15);
+}
+
+.schedule-notes h4 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.schedule-notes ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.schedule-notes li {
+    margin-bottom: 12px;
+    padding-left: 28px;
+    position: relative;
+    color: #1b5e20;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.schedule-notes li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Галерея */
+.direction-gallery-section {
+    padding: 100px 0;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.direction-gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* CTA Блок */
+.direction-cta-section {
+    background: linear-gradient(135deg, var(--header-color), #1a315f);
+    color: var(--white-color);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.direction-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.03" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.direction-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.direction-cta-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.direction-cta-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.direction-cta-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button.large {
+    padding: 20px 50px;
+    font-size: 1.3rem;
+    border-radius: 60px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-button.large:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button.secondary.large:hover {
+    background: var(--white-color);
+    color: var(--header-color);
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .direction-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .direction-info-container {
+        gap: 40px;
+    }
+    
+    .program-levels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .direction-hero h1 {
+        font-size: 2.6rem;
+    }
+    
+    .direction-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .direction-info-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .direction-sidebar {
+        position: static;
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 30px;
+    }
+    
+    .direction-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .program-levels {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .direction-cta-content h2 {
+        font-size: 2.3rem;
+    }
+    
+    .direction-cta-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .direction-hero {
+        min-height: 60vh;
+        padding-top: 90px;
+    }
+    
+    .direction-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .direction-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .direction-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .direction-hero-buttons .cta-button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .direction-main-info h2 {
+        font-size: 2rem;
+    }
+    
+    .direction-main-info > p {
+        padding: 20px;
+        font-size: 1.05rem;
+    }
+    
+    .direction-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-item {
+        padding: 25px;
+    }
+    
+    .direction-sidebar {
+        grid-template-columns: 1fr;
+    }
+    
+    .schedule-container {
+        padding: 25px;
+    }
+    
+    .schedule-tabs {
+        flex-direction: column;
+    }
+    
+    .schedule-tab {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .schedule-header,
+    .schedule-row {
+        grid-template-columns: 1fr;
+        display: block;
+    }
+    
+    .schedule-cell {
+        display: block;
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .schedule-row .schedule-cell:last-child {
+        border-bottom: none;
+    }
+    
+    .schedule-header .schedule-cell {
+        display: none;
+    }
+    
+    .schedule-header .schedule-cell:first-child {
+        display: block;
+        background: linear-gradient(135deg, var(--header-color), #1a315f);
+        color: white;
+        font-weight: 600;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .direction-cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .direction-cta-content p {
+        font-size: 1.1rem;
+    }
+    
+    .direction-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .cta-button.large {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .direction-hero h1 {
+        font-size: 1.9rem;
+    }
+    
+    .direction-subtitle {
+        font-size: 1rem;
+    }
+    
+    .direction-main-info h2 {
+        font-size: 1.7rem;
+    }
+    
+    .direction-benefits,
+    .direction-program,
+    .direction-card-sidebar,
+    .schedule-container {
+        padding: 20px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .coach-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .coach-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .achievement-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .schedule-notes li {
+        font-size: 1rem;
+    }
+    
+    .direction-cta-section {
+        padding: 70px 0;
+    }
+    
+    .techniques-tags {
+        gap: 8px;
+    }
+    
+    .technique-tag {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .spec-item {
+        padding: 15px;
+    }
+    
+    .spec-item i {
+        font-size: 2rem;
+    }
+}
+
+/*ПЛАВАНИЕ/
+
+/* direction-style.css - Дополнения для страницы плавания */
+
+/* Фоновые изображения для плавания */
+.swimming-hero {
+    background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Стили для иконок плавания */
+.fa-water:before {
+    content: "\f773";
+    font-family: "Font Awesome 6 Free";
+}
+
+.fa-swimming-pool:before {
+    content: "\f5c5";
+    font-family: "Font Awesome 6 Free";
+}
+
+/* Анимация волн для плавания */
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(-25px) translateY(5px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* Эффект воды для плавательных элементов */
+.swimming-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.swimming-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: wave 3s infinite linear;
+    z-index: 1;
+}
+
+/* Специальные стили для страницы плавания */
+.techniques-section.swimming-styles {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border: 2px solid rgba(33, 150, 243, 0.1);
+}
+
+.techniques-section.swimming-styles h3 {
+    color: #1565c0;
+}
+
+.technique-tag.swimming-tag {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+}
+
+.technique-tag.swimming-tag:hover {
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+}
+
+/* Стили для оборудования плавания */
+.equipment-card.swimming-equipment:hover {
+    border-color: #2196F3;
+    box-shadow: 0 15px 30px rgba(33, 150, 243, 0.15);
+}
+
+.equipment-card.swimming-equipment i {
+    color: #2196F3;
+}
+
+.equipment-card.swimming-equipment:hover i {
+    color: #1565c0;
+}
+
+/* Адаптивность для страницы плавания */
+@media (max-width: 768px) {
+    .techniques-tags {
+        gap: 10px;
+    }
+    
+    .technique-tag {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .direction-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .techniques-tags {
+        gap: 8px;
+    }
+    
+    .technique-tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .equipment-card {
+        padding: 15px;
+    }
+    
+    .equipment-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Дополнительные анимации для водной тематики */
+@keyframes floatWater {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+.feature-item i.fa-swimmer,
+.feature-item i.fa-swimming-pool,
+.feature-item i.fa-water {
+    animation: floatWater 3s infinite ease-in-out;
+}
+
+/* Стили для дорожек в расписании */
+.schedule-cell[data-lane]::after {
+    content: '🌊';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Специальный фон для медицинских требований плавания */
+.swimming-requirements-section {
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+    border-left: 6px solid #0288d1;
+}
+
+.swimming-requirements-section h4 {
+    color: #0277bd;
+}
+
+.swimming-requirements-section li {
+    color: #01579b;
+}
+
+.swimming-requirements-section li::before {
+    color: #0288d1;
+}
+
+/*ЛЕГКАЯ АТЛЕТИКА/
+
+/* direction-style.css - Дополнения для страницы легкой атлетики */
+
+/* Фоновые изображения для легкой атлетики */
+.athletics-hero {
+    background-image: url('https://images.unsplash.com/photo-1552674605-db6ffd8facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Анимация бега для иконок легкой атлетики */
+@keyframes run {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(10px) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(20px) rotate(0deg);
+    }
+    75% {
+        transform: translateX(10px) rotate(5deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Специальные стили для страницы легкой атлетики */
+.techniques-section.athletics-disciplines {
+    background: linear-gradient(135deg, #e8f4fd, #d4e9fa);
+    border: 2px solid rgba(66, 133, 244, 0.1);
+}
+
+.techniques-section.athletics-disciplines h3 {
+    color: #1a73e8;
+}
+
+.technique-tag.athletics-tag {
+    background: linear-gradient(135deg, #4285F4, #1a73e8);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
+}
+
+.technique-tag.athletics-tag:hover {
+    box-shadow: 0 8px 20px rgba(66, 133, 244, 0.3);
+}
+
+/* Стили для оборудования легкой атлетики */
+.equipment-card.athletics-equipment:hover {
+    border-color: #4285F4;
+    box-shadow: 0 15px 30px rgba(66, 133, 244, 0.15);
+}
+
+.equipment-card.athletics-equipment i {
+    color: #4285F4;
+}
+
+.equipment-card.athletics-equipment:hover i {
+    color: #0d47a1;
+}
+
+/* Анимации для легкоатлетических иконок */
+.feature-item i.fa-running,
+.feature-item i.fa-walking,
+.feature-item i.fa-road {
+    animation: run 2s infinite ease-in-out;
+}
+
+.feature-item i.fa-medal,
+.feature-item i.fa-trophy,
+.feature-item i.fa-award {
+    animation: jump 2s infinite ease-in-out;
+}
+
+/* Стили для спецификаций легкой атлетики */
+.direction-specs.athletics-specs .spec-item i {
+    color: #4285F4;
+}
+
+.direction-specs.athletics-specs .spec-item:hover i {
+    color: #0d47a1;
+    animation: run 0.5s ease-in-out;
+}
+
+/* Стили для расписания легкой атлетики */
+.schedule-cell[data-location="stadium"]::after {
+    content: '🏟️';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.schedule-cell[data-location="indoor"]::after {
+    content: '🏃';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Специальный фон для медицинских требований легкой атлетики */
+.athletics-requirements-section {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-left: 6px solid #1565c0;
+}
+
+.athletics-requirements-section h4 {
+    color: #0d47a1;
+}
+
+.athletics-requirements-section li {
+    color: #0d47a1;
+}
+
+.athletics-requirements-section li::before {
+    color: #1565c0;
+}
+
+/* Адаптивность для страницы легкой атлетики */
+@media (max-width: 768px) {
+    .techniques-tags {
+        gap: 10px;
+    }
+    
+    .technique-tag {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .direction-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .techniques-tags {
+        gap: 8px;
+    }
+    
+    .technique-tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .equipment-card {
+        padding: 15px;
+    }
+    
+    .equipment-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    /* Легкоатлетические дисциплины на мобильных */
+    .technique-tag.athletics-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Дополнительные стили для элементов легкой атлетики */
+.program-level.athletics-program {
+    border: 2px solid #e3f2fd;
+}
+
+.program-level.athletics-program:hover {
+    border-color: #4285F4;
+    background: linear-gradient(135deg, #f8fbff, #ffffff);
+}
+
+.program-level.athletics-program h4 {
+    color: #1a73e8;
+}
+
+/* Эффект для тренеров легкой атлетики */
+.coach-card.athletics-coach:hover .coach-avatar {
+    background: linear-gradient(135deg, #4285F4, #1a73e8);
+}
+
+/* Стили для достижений легкой атлетики */
+.achievement-item.athletics-achievement:hover {
+    background-color: rgba(66, 133, 244, 0.05);
+}
+
+/* Индикатор погоды для тренировок */
+.weather-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.weather-indicator i {
+    font-size: 1rem;
+}
+
+.weather-indicator.sun {
+    color: #FF9800;
+}
+
+.weather-indicator.cloud {
+    color: #607D8B;
+}
+
+.weather-indicator.rain {
+    color: #2196F3;
+}
+
+/*НАСТОЛЬНЫЙ ТЕННИС/
+
+/* direction-style.css - Дополнения для страницы настольного тенниса */
+
+/* Фоновые изображения для настольного тенниса */
+.table-tennis-hero {
+    background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Анимация мяча для настольного тенниса */
+@keyframes bounceBall {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    25% {
+        transform: translateY(-10px) scale(1.1);
+    }
+    50% {
+        transform: translateY(0) scale(1);
+    }
+    75% {
+        transform: translateY(-5px) scale(1.05);
+    }
+}
+
+@keyframes spinRacket {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Специальные стили для страницы настольного тенниса */
+.techniques-section.table-tennis-techniques {
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+    border: 2px solid rgba(156, 39, 176, 0.1);
+}
+
+.techniques-section.table-tennis-techniques h3 {
+    color: #7b1fa2;
+}
+
+.technique-tag.table-tennis-tag {
+    background: linear-gradient(135deg, #9C27B0, #7b1fa2);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
+}
+
+.technique-tag.table-tennis-tag:hover {
+    box-shadow: 0 8px 20px rgba(156, 39, 176, 0.3);
+}
+
+/* Стили для оборудования настольного тенниса */
+.equipment-card.table-tennis-equipment:hover {
+    border-color: #9C27B0;
+    box-shadow: 0 15px 30px rgba(156, 39, 176, 0.15);
+}
+
+.equipment-card.table-tennis-equipment i {
+    color: #9C27B0;
+}
+
+.equipment-card.table-tennis-equipment:hover i {
+    color: #6a1b9a;
+}
+
+/* Анимации для иконок настольного тенниса */
+.feature-item i.fa-table-tennis,
+.feature-item i.fa-table-tennis-paddle-ball {
+    animation: bounceBall 1.5s infinite ease-in-out;
+}
+
+.feature-item i.fa-table-tennis-paddle-ball {
+    animation: spinRacket 2s infinite ease-in-out;
+}
+
+.feature-item i.fa-user-tie {
+    animation: bounceBall 2s infinite ease-in-out;
+}
+
+/* Стили для спецификаций настольного тенниса */
+.direction-specs.table-tennis-specs .spec-item i {
+    color: #9C27B0;
+}
+
+.direction-specs.table-tennis-specs .spec-item:hover i {
+    color: #6a1b9a;
+    animation: bounceBall 0.5s ease-in-out;
+}
+
+/* Стили для расписания настольного тенниса */
+.schedule-cell[data-hall="table-tennis-1"]::after {
+    content: '🏓';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.schedule-cell[data-hall="table-tennis-2"]::after {
+    content: '🎯';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Специальный фон для медицинских требований настольного тенниса */
+.table-tennis-requirements-section {
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+    border-left: 6px solid #9C27B0;
+}
+
+.table-tennis-requirements-section h4 {
+    color: #7b1fa2;
+}
+
+.table-tennis-requirements-section li {
+    color: #6a1b9a;
+}
+
+.table-tennis-requirements-section li::before {
+    color: #9C27B0;
+}
+
+/* Адаптивность для страницы настольного тенниса */
+@media (max-width: 768px) {
+    .techniques-tags {
+        gap: 10px;
+    }
+    
+    .technique-tag {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .direction-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .techniques-tags {
+        gap: 8px;
+    }
+    
+    .technique-tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .equipment-card {
+        padding: 15px;
+    }
+    
+    .equipment-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    /* Техники настольного тенниса на мобильных */
+    .technique-tag.table-tennis-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Дополнительные стили для элементов настольного тенниса */
+.program-level.table-tennis-program {
+    border: 2px solid #f3e5f5;
+}
+
+.program-level.table-tennis-program:hover {
+    border-color: #9C27B0;
+    background: linear-gradient(135deg, #faf4fb, #ffffff);
+}
+
+.program-level.table-tennis-program h4 {
+    color: #7b1fa2;
+}
+
+/* Эффект для тренеров настольного тенниса */
+.coach-card.table-tennis-coach:hover .coach-avatar {
+    background: linear-gradient(135deg, #9C27B0, #7b1fa2);
+}
+
+/* Стили для достижений настольного тенниса */
+.achievement-item.table-tennis-achievement:hover {
+    background-color: rgba(156, 39, 176, 0.05);
+}
+
+/* Индикатор уровня для тренировок */
+.level-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.level-indicator i {
+    font-size: 1rem;
+}
+
+.level-indicator.beginner {
+    color: #4CAF50;
+}
+
+.level-indicator.intermediate {
+    color: #FF9800;
+}
+
+.level-indicator.advanced {
+    color: #F44336;
+}
+
+/* Стили для таблицы тенниса */
+.table-tennis-table {
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    background: linear-gradient(135deg, #2E7D32, #4CAF50);
+    border-radius: 4px;
+    position: relative;
+    margin-right: 8px;
+}
+
+.table-tennis-table::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: white;
+    transform: translateY(-50%);
+}
+
+.table-tennis-table::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+/*Художественная гимнастика/
+
+/* direction-style.css - Дополнения для страницы художественной гимнастики */
+
+/* Фоновые изображения для художественной гимнастики */
+.gymnastics-hero {
+    background-image: url('https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Анимация для художественной гимнастики */
+@keyframes ribbonFlow {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(10px) rotate(5deg);
+    }
+    50% {
+        transform: translateX(20px) rotate(0deg);
+    }
+    75% {
+        transform: translateX(10px) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes ballBounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    30% {
+        transform: translateY(-15px) scale(1.05);
+    }
+    60% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes hoopSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Специальные стили для страницы художественной гимнастики */
+.techniques-section.gymnastics-items {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+    border: 2px solid rgba(233, 30, 99, 0.1);
+}
+
+.techniques-section.gymnastics-items h3 {
+    color: #c2185b;
+}
+
+.technique-tag.gymnastics-tag {
+    background: linear-gradient(135deg, #E91E63, #c2185b);
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+}
+
+.technique-tag.gymnastics-tag:hover {
+    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+}
+
+/* Стили для оборудования художественной гимнастики */
+.equipment-card.gymnastics-equipment:hover {
+    border-color: #E91E63;
+    box-shadow: 0 15px 30px rgba(233, 30, 99, 0.15);
+}
+
+.equipment-card.gymnastics-equipment i {
+    color: #E91E63;
+}
+
+.equipment-card.gymnastics-equipment:hover i {
+    color: #ad1457;
+}
+
+/* Анимации для иконок художественной гимнастики */
+.feature-item i.fa-child,
+.feature-item i.fa-female {
+    animation: ballBounce 2s infinite ease-in-out;
+}
+
+.feature-item i.fa-ribbon {
+    animation: ribbonFlow 3s infinite ease-in-out;
+}
+
+.feature-item i.fa-medal,
+.feature-item i.fa-trophy {
+    animation: hoopSpin 4s infinite linear;
+}
+
+/* Стили для спецификаций художественной гимнастики */
+.direction-specs.gymnastics-specs .spec-item i {
+    color: #E91E63;
+}
+
+.direction-specs.gymnastics-specs .spec-item:hover i {
+    color: #c2185b;
+    animation: ballBounce 0.5s ease-in-out;
+}
+
+/* Стили для расписания художественной гимнастики */
+.schedule-cell[data-hall="small"]::after {
+    content: '🩰';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.schedule-cell[data-hall="big"]::after {
+    content: '🎀';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Специальный фон для медицинских требований художественной гимнастики */
+.gymnastics-requirements-section {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+    border-left: 6px solid #E91E63;
+}
+
+.gymnastics-requirements-section h4 {
+    color: #c2185b;
+}
+
+.gymnastics-requirements-section li {
+    color: #ad1457;
+}
+
+.gymnastics-requirements-section li::before {
+    color: #E91E63;
+}
+
+/* Адаптивность для страницы художественной гимнастики */
+@media (max-width: 768px) {
+    .techniques-tags {
+        gap: 10px;
+    }
+    
+    .technique-tag {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .direction-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .techniques-tags {
+        gap: 8px;
+    }
+    
+    .technique-tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .equipment-card {
+        padding: 15px;
+    }
+    
+    .equipment-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    /* Предметы художественной гимнастики на мобильных */
+    .technique-tag.gymnastics-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Дополнительные стили для элементов художественной гимнастики */
+.program-level.gymnastics-program {
+    border: 2px solid #fce4ec;
+}
+
+.program-level.gymnastics-program:hover {
+    border-color: #E91E63;
+    background: linear-gradient(135deg, #fef6f9, #ffffff);
+}
+
+.program-level.gymnastics-program h4 {
+    color: #c2185b;
+}
+
+/* Эффект для тренеров художественной гимнастики */
+.coach-card.gymnastics-coach:hover .coach-avatar {
+    background: linear-gradient(135deg, #E91E63, #c2185b);
+}
+
+/* Стили для достижений художественной гимнастики */
+.achievement-item.gymnastics-achievement:hover {
+    background-color: rgba(233, 30, 99, 0.05);
+}
+
+/* Индикатор дисциплины для тренировок */
+.discipline-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.discipline-indicator i {
+    font-size: 1rem;
+}
+
+.discipline-indicator.choreography {
+    color: #9C27B0;
+}
+
+.discipline-indicator.flexibility {
+    color: #2196F3;
+}
+
+.discipline-indicator.apparatus {
+    color: #FF9800;
+}
+
+/* Стили для предметов гимнастики */
+.gymnastics-apparatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px;
+}
+
+.gymnastics-apparatus.ball {
+    color: #FF4081;
+}
+
+.gymnastics-apparatus.hoop {
+    color: #3F51B5;
+}
+
+.gymnastics-apparatus.ribbon {
+    color: #E91E63;
+}
+
+.gymnastics-apparatus.clubs {
+    color: #009688;
+}
+
+.gymnastics-apparatus.rope {
+    color: #FF9800;
+}
+
+/* Эффект грации для заголовков */
+.graceful-title {
+    position: relative;
+    display: inline-block;
+}
+
+.graceful-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #E91E63, transparent);
+    border-radius: 1px;
+}
+
+/* Анимация растяжки */
+@keyframes stretch {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.05);
+    }
+}
+
+.stretch-animation {
+    animation: stretch 2s infinite ease-in-out;
+}
+
+/*ШАХМАТЫ/
+
+/* direction-style.css - Дополнения для страницы шахмат */
+
+/* Фоновые изображения для шахмат */
+.chess-hero {
+    background-image: url('https://images.unsplash.com/photo-1528819622765-d6b0c1eda899?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Анимация для шахматных фигур */
+@keyframes chessMove {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-3px) rotate(-2deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes chessThink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes chessClock {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Специальные стили для страницы шахмат */
+.techniques-section.chess-disciplines {
+    background: linear-gradient(135deg, #212121, #424242);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.techniques-section.chess-disciplines h3 {
+    color: #ffffff;
+}
+
+.technique-tag.chess-tag {
+    background: linear-gradient(135deg, #616161, #424242);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.technique-tag.chess-tag:hover {
+    background: linear-gradient(135deg, #757575, #616161);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Стили для оборудования шахмат */
+.equipment-card.chess-equipment:hover {
+    border-color: #616161;
+    box-shadow: 0 15px 30px rgba(97, 97, 97, 0.15);
+}
+
+.equipment-card.chess-equipment i {
+    color: #616161;
+}
+
+.equipment-card.chess-equipment:hover i {
+    color: #424242;
+}
+
+/* Анимации для иконок шахмат */
+.feature-item i.fa-chess,
+.feature-item i.fa-chess-king,
+.feature-item i.fa-chess-queen {
+    animation: chessMove 2s infinite ease-in-out;
+}
+
+.feature-item i.fa-user-tie {
+    animation: chessThink 3s infinite ease-in-out;
+}
+
+.feature-item i.fa-clock {
+    animation: chessClock 4s infinite linear;
+}
+
+/* Стили для спецификаций шахмат */
+.direction-specs.chess-specs .spec-item i {
+    color: #616161;
+}
+
+.direction-specs.chess-specs .spec-item:hover i {
+    color: #424242;
+    animation: chessMove 0.5s ease-in-out;
+}
+
+/* Стили для расписания шахмат */
+.schedule-cell[data-hall="chess-1"]::after {
+    content: '♔';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.schedule-cell[data-hall="chess-2"]::after {
+    content: '♕';
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Специальный фон для медицинских требований шахмат */
+.chess-requirements-section {
+    background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+    border-left: 6px solid #616161;
+}
+
+.chess-requirements-section h4 {
+    color: #424242;
+}
+
+.chess-requirements-section li {
+    color: #212121;
+}
+
+.chess-requirements-section li::before {
+    color: #616161;
+}
+
+/* Адаптивность для страницы шахмат */
+@media (max-width: 768px) {
+    .techniques-tags {
+        gap: 10px;
+    }
+    
+    .technique-tag {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .direction-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .techniques-tags {
+        gap: 8px;
+    }
+    
+    .technique-tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .equipment-card {
+        padding: 15px;
+    }
+    
+    .equipment-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    /* Дисциплины шахмат на мобильных */
+    .technique-tag.chess-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Дополнительные стили для элементов шахмат */
+.program-level.chess-program {
+    border: 2px solid #f5f5f5;
+}
+
+.program-level.chess-program:hover {
+    border-color: #616161;
+    background: linear-gradient(135deg, #fafafa, #ffffff);
+}
+
+.program-level.chess-program h4 {
+    color: #424242;
+}
+
+/* Эффект для тренеров шахмат */
+.coach-card.chess-coach:hover .coach-avatar {
+    background: linear-gradient(135deg, #616161, #424242);
+}
+
+/* Стили для достижений шахмат */
+.achievement-item.chess-achievement:hover {
+    background-color: rgba(97, 97, 97, 0.05);
+}
+
+/* Индикатор уровня для занятий */
+.skill-level-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.skill-level-indicator i {
+    font-size: 1rem;
+}
+
+.skill-level-indicator.beginner {
+    color: #4CAF50;
+}
+
+.skill-level-indicator.intermediate {
+    color: #2196F3;
+}
+
+.skill-level-indicator.advanced {
+    color: #9C27B0;
+}
+
+/* Стили для шахматных фигур */
+.chess-piece {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.chess-piece.king {
+    color: #FF9800;
+}
+
+.chess-piece.queen {
+    color: #9C27B0;
+}
+
+.chess-piece.rook {
+    color: #3F51B5;
+}
+
+.chess-piece.bishop {
+    color: #009688;
+}
+
+.chess-piece.knight {
+    color: #795548;
+}
+
+.chess-piece.pawn {
+    color: #607D8B;
+}
+
+/* Эффект шахматной доски */
+.chess-board-effect {
+    position: relative;
+}
+
+.chess-board-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Анимация хода */
+@keyframes chessTurn {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.chess-turn-animation {
+    animation: chessTurn 1s ease-in-out;
+}
+
+/* Стили для шахматных часов */
+.chess-clock {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #424242, #212121);
+    border-radius: 50%;
+    position: relative;
+    margin-right: 8px;
+}
+
+.chess-clock::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 15px;
+    background: white;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(0deg);
+}

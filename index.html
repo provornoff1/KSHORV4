@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КСШОР Республики Мордовия г. Саранск</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell logo-icon"></i>
+                <span class="logo-text">КСШОР Республики Мордовия</span>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#directions">Направления</a></li>
+                    <li><a href="#application">Подать заявку</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный блок -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Комплекс спортивной школы олимпийского резерва Республики Мордовия г. Саранск</h1>
+                <p>Комплекс спортивной школы олимпийского резерва - ведущее учреждение спортивной подготовки в Республике Мордовия. Мы готовим чемпионов и пропагандируем здоровый образ жизни среди населения.</p>
+                <div class="hero-buttons">
+                    <a href="#directions" class="cta-button">Наши направления</a>
+                    <a href="#application" class="cta-button secondary">Подать заявку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Направления -->
+    <section class="section" id="directions">
+        <div class="container">
+            <h2 class="section-title">Спортивные направления</h2>
+            <div class="directions-grid">
+                <!-- Греко-римская борьба -->
+                <div class="direction-card">
+                    <img src="img/wrestling/1glav.jpg" 
+                         alt="Греко-римская борьба" class="direction-img" loading="lazy">
+                    <div class="direction-content">
+                        <h3 class="direction-title">Греко-римская борьба</h3>
+                        <p>Классическая борьба для мальчиков и юношей с 10 лет. Подготовка к республиканским и всероссийским соревнованиям.</p>
+                        <a href="wrestling.html" class="direction-link">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Плавание -->
+                <div class="direction-card">
+                    <img src="img/swimming/1glav.jpg" 
+                         alt="Плавание" class="direction-img" loading="lazy">
+                    <div class="direction-content">
+                        <h3 class="direction-title">Плавание</h3>
+                        <p>Обучение плаванию детей с 7 лет. Спортивные группы и группы оздоровительного плавания.</p>
+                        <a href="swimming.html" class="direction-link">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Легкая атлетика -->
+                <div class="direction-card">
+                    <img src="img/athletics/1glav.jpg" 
+                         alt="Легкая атлетика" class="direction-img" loading="lazy">
+                    <div class="direction-content">
+                        <h3 class="direction-title">Легкая атлетика</h3>
+                        <p>Бег, прыжки, метание. Группы для детей и подростков с 9 лет. Подготовка к соревнованиям различного уровня.</p>
+                        <a href="athletics.html" class="direction-link">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Настольный теннис -->
+                <div class="direction-card">
+                    <img src="img/table-tennis/1glav.jpg" 
+                         alt="Настольный теннис" class="direction-img" loading="lazy">
+                    <div class="direction-content">
+                        <h3 class="direction-title">Настольный теннис</h3>
+                        <p>Индивидуальные и групповые занятия для детей с 8 лет. Развитие реакции, координации и стратегического мышления.</p>
+                        <a href="table-tennis.html" class="direction-link">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Художественная гимнастика -->
+                <div class="direction-card">
+                    <img src="img/gymnastics/1glav.jpg" 
+                         alt="Художественная гимнастика" class="direction-img" loading="lazy">
+                    <div class="direction-content">
+                        <h3 class="direction-title">Художественная гимнастика</h3>
+                        <p>Занятия для девочек с 5 лет. Развитие гибкости, грации и артистизма. Участие в конкурсах и соревнованиях.</p>
+                        <a href="gymnastics.html" class="direction-link">Подробнее</a>
+                    </div>
+                </div>
+                
+                <!-- Шахматы -->
+                <div class="direction-card">
+                    <img src="img/chess/1glav.jpg" 
+                         alt="Шахматы" class="direction-img" loading="lazy">
+                    <div class="direction-content">
+                        <h3 class="direction-title">Шахматы</h3>
+                        <p>Развитие логического мышления и стратегических навыков. Занятия для детей с 6 лет и взрослых.</p>
+                        <a href="chess.html" class="direction-link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок заявки -->
+    <section class="section application-section" id="application">
+        <div class="container">
+            <h2 class="section-title">Подать заявку на обучение</h2>
+            <div class="application-container">
+                <div class="application-info">
+                    <h3>Как записаться в нашу школу?</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Выберите спортивное направление</li>
+                        <li><i class="fas fa-check-circle"></i> Заполните форму заявки</li>
+                        <li><i class="fas fa-check-circle"></i> Мы свяжемся с вами в течение 24 часов</li>
+                        <li><i class="fas fa-check-circle"></i> Пройдите бесплатное пробное занятие</li>
+                        <li><i class="fas fa-check-circle"></i> Заключите договор на обучение</li>
+                    </ul>
+                    <div class="contact-info-box">
+                        <h4>Или свяжитесь с нами напрямую:</h4>
+                        <p><i class="fas fa-phone"></i> +7 (8342) 55-55-55</p>
+                        <p><i class="fas fa-envelope"></i> kshor-mordovia@sport.ru</p>
+                    </div>
+                </div>
+                
+                <div class="application-form">
+                    <form id="applicationForm">
+                        <h3>Форма заявки</h3>
+                        <div class="form-group">
+                            <input type="text" id="fullName" placeholder="ФИО ребенка" required>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="age" placeholder="Возраст ребенка (5-18 лет)" 
+                                oninput="validateAge(this)" required>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" 
+                                oninput="formatPhone(this)" required>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <select id="direction" required>
+                                <option value="" disabled selected>Выберите направление</option>
+                                <option value="wrestling">Греко-римская борьба</option>
+                                <option value="swimming">Плавание</option>
+                                <option value="athletics">Легкая атлетика</option>
+                                <option value="table-tennis">Настольный теннис</option>
+                                <option value="gymnastics">Художественная гимнастика</option>
+                                <option value="chess">Шахматы</option>
+                            </select>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Дополнительная информация (необязательно)" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы родителей и спортсменов</h2>
+            <p class="section-subtitle">Что говорят о нашей спортивной школе</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Мария Иванова</h4>
+                                <p>Мать спортсмена (греко-римская борьба)</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Мой сын занимается в КСШОР уже 3 года. За это время он не только окреп физически, но и стал более дисциплинированным, целеустремленным. Тренерский состав - профессионалы высочайшего уровня!"</p>
+                    </div>
+                    <div class="review-date">
+                        <i class="far fa-calendar"></i> 15 октября 2023
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Ольга Смирнова</h4>
+                                <p>Мать спортсменки (художественная гимнастика)</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Дочь занимается художественной гимнастикой в этой школе уже 5 лет. За это время она стала призером республиканских соревнований. Огромная благодарность тренерам за их терпение и профессионализм!"</p>
+                    </div>
+                    <div class="review-date">
+                        <i class="far fa-calendar"></i> 8 ноября 2023
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Алексей Петров</h4>
+                                <p>Выпускник, отец спортсмена (плавание)</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Я сам выпускник КСШОР, а теперь привожу сюда своего сына. Школа сохранила высокий уровень подготовки, залы оснащены современным оборудованием. Это лучшее спортивное учреждение в Мордовии!"</p>
+                    </div>
+                    <div class="review-date">
+                        <i class="far fa-calendar"></i> 22 ноября 2023
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Елена Васильева</h4>
+                                <p>Мать спортсмена (легкая атлетика)</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Отличная школа с профессиональными тренерами! Мой ребенок занимается легкой атлетикой второй год, и мы видим потрясающие результаты. Организация учебного процесса на высшем уровне."</p>
+                    </div>
+                    <div class="review-date">
+                        <i class="far fa-calendar"></i> 5 декабря 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>КСШОР Республики Мордовия</h3>
+                    <p>Колледж спортивной школы олимпийского резерва - ведущее учреждение спортивной подготовки в Республике Мордовия.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Саранск, ул. Спортивная, д. 15</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (8342) 55-55-55</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>kshor-mordovia@sport.ru</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Пт: 8:00-20:00, Сб: 9:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="contact-info">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#directions">Направления</a></li>
+                        <li><a href="#application">Подать заявку</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Администрация</h3>
+                    <ul class="contact-info">
+                        <li><a href="admin.html" style="color: var(--white-color);"><i class="fas fa-user-shield"></i> Вход для администраторов</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 КСШОР Республики Мордовия г. Саранск. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Стрелка для возврата наверх -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

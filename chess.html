@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматы - КСШОР Республики Мордовия</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="direction-style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-dumbbell logo-icon"></i>
+                <span class="logo-text">КСШОР Республики Мордовия</span>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#home">Главная</a></li>
+                    <li><a href="index.html#directions">Направления</a></li>
+                    <li><a href="index.html#application">Подать заявку</a></li>
+                    <li><a href="index.html#reviews">Отзывы</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный блок направления -->
+    <section class="direction-hero chess-hero">
+        <div class="container">
+            <div class="direction-hero-content">
+                <h1>Шахматы</h1>
+                <p class="direction-subtitle">Королевская игра для детей с 6 лет. Развитие логики, стратегического мышления и концентрации</p>
+                <div class="direction-hero-buttons">
+                    <a href="#schedule" class="cta-button">
+                        <i class="far fa-calendar-alt"></i> Расписание
+                    </a>
+                    <a href="index.html#application" class="cta-button secondary">
+                        <i class="fas fa-file-alt"></i> Записаться
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Информация о направлении -->
+    <section class="direction-info-section">
+        <div class="container">
+            <div class="direction-info-container">
+                <div class="direction-main-info">
+                    <h2>О направлении</h2>
+                    <p>Шахматы — это не просто игра, а целый мир стратегий, логики и интеллектуального развития. Наша шахматная школа обучает детей с 6 лет основам шахматной игры, развивая логическое мышление, память, концентрацию и умение принимать решения.</p>
+                    
+                    <!-- Спецификации для шахмат -->
+                    <div class="direction-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-chess"></i>
+                            <h4>Возраст занятий</h4>
+                            <p>6-18 лет</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>Пол спортсменов</h4>
+                            <p>Мальчики и девочки</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-chess-board"></i>
+                            <h4>Оборудование</h4>
+                            <p>Профессиональные шахматные наборы</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Размер группы</h4>
+                            <p>До 12 человек</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Шахматные дисциплины -->
+                    <div class="techniques-section">
+                        <h3>Основные направления обучения</h3>
+                        <div class="techniques-tags">
+                            <span class="technique-tag">Классические шахматы</span>
+                            <span class="technique-tag">Быстрые шахматы</span>
+                            <span class="technique-tag">Блиц</span>
+                            <span class="technique-tag">Сеансы одновременной игры</span>
+                            <span class="technique-tag">Решение задач</span>
+                            <span class="technique-tag">Анализ партий</span>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-features">
+                        <div class="feature-item">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>Возрастные группы</h4>
+                            <p>6-18 лет (мальчики и девочки)</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Достижения</h4>
+                            <p>Чемпионы республики, призеры ПФО</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-tie"></i>
+                            <h4>Тренерский состав</h4>
+                            <p>Кандидаты в мастера спорта, опытные педагоги</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Оборудование</h4>
+                            <p>Профессиональные доски, часы, демонстрационные доски</p>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-benefits">
+                        <h3>Преимущества занятий шахматами:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Развитие логического и аналитического мышления</li>
+                            <li><i class="fas fa-check"></i> Улучшение памяти и концентрации внимания</li>
+                            <li><i class="fas fa-check"></i> Формирование стратегического планирования</li>
+                            <li><i class="fas fa-check"></i> Развитие умения принимать решения</li>
+                            <li><i class="fas fa-check"></i> Укрепление усидчивости и терпения</li>
+                            <li><i class="fas fa-check"></i> Подготовка к турнирам различного уровня</li>
+                        </ul>
+                    </div>
+
+                    <!-- Необходимое оборудование -->
+                    <div class="equipment-section">
+                        <h3>Необходимая экипировка</h3>
+                        <div class="equipment-grid">
+                            <div class="equipment-card">
+                                <i class="fas fa-chess-board"></i>
+                                <span>Шахматная доска</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-chess"></i>
+                                <span>Шахматные фигуры</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-clock"></i>
+                                <span>Шахматные часы</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-book"></i>
+                                <span>Тетрадь для записей</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-pen"></i>
+                                <span>Ручка/карандаш</span>
+                            </div>
+                            <div class="equipment-card">
+                                <i class="fas fa-briefcase-medical"></i>
+                                <span>Медицинская справка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Медицинские требования -->
+                    <div class="requirements-section">
+                        <h4><i class="fas fa-heartbeat"></i> Медицинские требования</h4>
+                        <ul>
+                            <li>Обязательна справка от педиатра о допуске к занятиям шахматами</li>
+                            <li>Осмотр невролога для детей с нарушениями внимания</li>
+                            <li>Рекомендации окулиста для детей с нарушениями зрения</li>
+                            <li>Справка об отсутствии противопоказаний для интеллектуальных нагрузок</li>
+                        </ul>
+                    </div>
+
+                    <div class="direction-program">
+                        <h3>Программа обучения</h3>
+                        <div class="program-levels">
+                            <div class="program-level">
+                                <h4><i class="fas fa-seedling"></i> Основной уровень 6-18 лет</h4>
+                                <p>Основы шахматной игры, ходы фигур, простые тактические приемы, правила шахмат, основы шахматной нотации</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="direction-sidebar">
+                    <div class="direction-card-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-info-circle"></i> Быстрая информация</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="info-item">
+                                <span class="info-label">Минимальный возраст:</span>
+                                <span class="info-value">6 лет</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Пол:</span>
+                                <span class="info-value">Мальчики и девочки</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Тренировок в неделю:</span>
+                                <span class="info-value">2-3 раза</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Длительность тренировки:</span>
+                                <span class="info-value">1,5 часа</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Необходимая экипировка:</span>
+                                <span class="info-value">Шахматы, тетрадь, ручка</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Стоимость в месяц:</span>
+                                <span class="info-value">2 500 ₽</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Место занятий:</span>
+                                <span class="info-value">Шахматный клуб</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-footer">
+                            <a href="index.html#application" class="sidebar-btn">
+                                <i class="fas fa-file-signature"></i> Записаться на пробное занятие
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-card-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-user-graduate"></i> Тренеры</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="coach-card">
+                                <div class="coach-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="coach-info">
+                                    <h4>Гроссмейстеров Игорь Павлович</h4>
+                                    <p>Кандидат в мастера спорта</p>
+                                    <p>Стаж: 20 лет</p>
+                                </div>
+                            </div>
+                            <div class="coach-card">
+                                <div class="coach-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="coach-info">
+                                    <h4>Ладейная Анна Викторовна</h4>
+                                    <p>Кандидат в мастера спорта</p>
+                                    <p>Стаж: 12 лет</p>
+                                </div>
+                            </div>
+                            <div class="coach-card">
+                                <div class="coach-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="coach-info">
+                                    <h4>Ферзева Екатерина Дмитриевна</h4>
+                                    <p>I разряд по шахматам</p>
+                                    <p>Стаж: 8 лет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="direction-card-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-award"></i> Наши достижения</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-medal" style="color: #FFD700;"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>5 золотых медалей</h4>
+                                    <p>Чемпионат Республики Мордовия 2023</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-medal" style="color: #C0C0C0;"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>3 серебряные медали</h4>
+                                    <p>Соревнования ПФО 2023</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-trophy" style="color: #CD7F32;"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>Кубок "Юный гроссмейстер"</h4>
+                                    <p>Международный турнир 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Расписание -->
+    <section class="direction-schedule-section" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Расписание занятий</h2>
+            <p class="section-subtitle">Расписание на текущий семестр</p>
+            
+            <div class="schedule-container">
+                <div class="schedule-tabs">
+                    <button class="schedule-tab active" data-group="junior">
+                        <span class="tab-text">Младшая группа (6-9 лет)</span>
+                    </button>
+                    <button class="schedule-tab" data-group="middle">
+                        <span class="tab-text">Средняя группа (10-13 лет)</span>
+                    </button>
+                    <button class="schedule-tab" data-group="senior">
+                        <span class="tab-text">Старшая группа (14-18 лет)</span>
+                    </button>
+                </div>
+                
+                <div class="schedule-content">
+                    <!-- Младшая группа -->
+                    <div class="schedule-group active" id="junior">
+                        <div class="schedule-table">
+                            <div class="schedule-header">
+                                <div class="schedule-cell">День недели</div>
+                                <div class="schedule-cell">Время</div>
+                                <div class="schedule-cell">Тренер</div>
+                                <div class="schedule-cell">Зал</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Понедельник</span>
+                                </div>
+                                <div class="schedule-cell">15:00 - 16:30</div>
+                                <div class="schedule-cell">Ферзева Е.Д.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Среда</span>
+                                </div>
+                                <div class="schedule-cell">15:00 - 16:30</div>
+                                <div class="schedule-cell">Ферзева Е.Д.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Пятница</span>
+                                </div>
+                                <div class="schedule-cell">15:00 - 16:30</div>
+                                <div class="schedule-cell">Ладейная А.В.</div>
+                                <div class="schedule-cell">Шахматный зал №2</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Средняя группа -->
+                    <div class="schedule-group" id="middle">
+                        <div class="schedule-table">
+                            <div class="schedule-header">
+                                <div class="schedule-cell">День недели</div>
+                                <div class="schedule-cell">Время</div>
+                                <div class="schedule-cell">Тренер</div>
+                                <div class="schedule-cell">Зал</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Вторник</span>
+                                </div>
+                                <div class="schedule-cell">16:00 - 17:30</div>
+                                <div class="schedule-cell">Ладейная А.В.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Четверг</span>
+                                </div>
+                                <div class="schedule-cell">16:00 - 17:30</div>
+                                <div class="schedule-cell">Ладейная А.В.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Суббота</span>
+                                </div>
+                                <div class="schedule-cell">11:00 - 12:30</div>
+                                <div class="schedule-cell">Гроссмейстеров И.П.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Старшая группа -->
+                    <div class="schedule-group" id="senior">
+                        <div class="schedule-table">
+                            <div class="schedule-header">
+                                <div class="schedule-cell">День недели</div>
+                                <div class="schedule-cell">Время</div>
+                                <div class="schedule-cell">Тренер</div>
+                                <div class="schedule-cell">Зал</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Понедельник</span>
+                                </div>
+                                <div class="schedule-cell">17:00 - 19:00</div>
+                                <div class="schedule-cell">Гроссмейстеров И.П.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Вторник</span>
+                                </div>
+                                <div class="schedule-cell">17:30 - 19:30</div>
+                                <div class="schedule-cell">Гроссмейстеров И.П.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Среда</span>
+                                </div>
+                                <div class="schedule-cell">17:00 - 19:00</div>
+                                <div class="schedule-cell">Гроссмейстеров И.П.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Четверг</span>
+                                </div>
+                                <div class="schedule-cell">17:30 - 19:30</div>
+                                <div class="schedule-cell">Гроссмейстеров И.П.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                            <div class="schedule-row">
+                                <div class="schedule-cell">
+                                    <span class="day-name">Суббота</span>
+                                </div>
+                                <div class="schedule-cell">13:00 - 15:00</div>
+                                <div class="schedule-cell">Гроссмейстеров И.П.</div>
+                                <div class="schedule-cell">Шахматный зал №1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="schedule-notes">
+                    <h4><i class="fas fa-exclamation-circle"></i> Важная информация:</h4>
+                    <ul>
+                        <li>Первое занятие — бесплатное пробное</li>
+                        <li>При себе иметь: шахматную доску, фигуры, тетрадь, ручку</li>
+                        <li>Обязательна медицинская справка о допуске к занятиям шахматами</li>
+                        <li>Шахматный набор можно приобрести в спортивном магазине или взять напрокат у нас</li>
+                        <li>Занятия начинаются строго по расписанию</li>
+                        <li>Запись в группы производится после пробного занятия</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="direction-gallery-section">
+        <div class="container">
+            <h2 class="section-title">Наши занятия</h2>
+            <p class="section-subtitle">Фотографии с занятий и турниров</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/chess/1glav.jpg" 
+                         alt="Занятие по шахматам" loading="lazy">
+                    <div class="gallery-caption">Учебный процесс</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/chess/3sorevi.jfif" 
+                         alt="Шахматный турнир" loading="lazy">
+                    <div class="gallery-caption">Республиканский турнир</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/chess/4 nagradi.jfif" 
+                         alt="Награждение шахматистов" loading="lazy">
+                    <div class="gallery-caption">Награждение победителей</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Блок -->
+    <section class="direction-cta-section">
+        <div class="container">
+            <div class="direction-cta-content">
+                <h2>Начните играть в шахматы с нами!</h2>
+                <p>Запишитесь на бесплатное пробное занятие по шахматам и откройте для себя мир интеллектуальной игры!</p>
+                <div class="direction-cta-buttons">
+                    <a href="index.html#application" class="cta-button large">
+                        <i class="fas fa-file-signature"></i> Записаться сейчас
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>КСШОР Республики Мордовия</h3>
+                    <p>Колледж спортивной школы олимпийского резерва - ведущее учреждение спортивной подготовки в Республике Мордовия.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Саранск, ул. Спортивная, д. 15</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (8342) 55-55-55</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>kshor-mordovia@sport.ru</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Пт: 8:00-20:00, Сб: 9:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="contact-info">
+                        <li><a href="index.html#home">Главная</a></li>
+                        <li><a href="index.html#directions">Направления</a></li>
+                        <li><a href="index.html#application">Подать заявку</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 КСШОР Республики Мордовия г. Саранск. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Стрелка для возврата наверх -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript для страницы шахмат
+        document.addEventListener('DOMContentLoaded', function() {
+            // Табы расписания
+            const scheduleTabs = document.querySelectorAll('.schedule-tab');
+            const scheduleGroups = document.querySelectorAll('.schedule-group');
+            
+            scheduleTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Удаляем активный класс у всех вкладок
+                    scheduleTabs.forEach(t => t.classList.remove('active'));
+                    // Добавляем активный класс текущей вкладке
+                    tab.classList.add('active');
+                    
+                    // Скрываем все группы
+                    scheduleGroups.forEach(group => group.classList.remove('active'));
+                    
+                    // Показываем нужную группу
+                    const groupId = tab.getAttribute('data-group');
+                    document.getElementById(groupId).classList.add('active');
+                });
+            });
+            
+            // Возврат наверх
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTop.style.display = 'block';
+                    } else {
+                        backToTop.style.display = 'none';
+                    }
+                });
+                
+                backToTop.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Мобильное меню
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
